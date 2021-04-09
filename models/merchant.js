@@ -16,15 +16,15 @@ const merchantSchema = new mongoose.Schema({
     },
     merchant_uid:{
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     mye_access_token:{
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
-    channels:[{ type: Schema.Types.ObjectId, ref: 'Channel' }]
+    channels:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Channel' }]
 }, { timestamps: true });
 
 

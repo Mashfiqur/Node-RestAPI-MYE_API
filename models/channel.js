@@ -13,7 +13,7 @@ const channelSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    user_id: { type: Schema.Types.ObjectId, ref: 'Merchant' },
+    merchant_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Merchant' },
     country:{
         type: String,
         required: true,

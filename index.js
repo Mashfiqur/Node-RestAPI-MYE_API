@@ -1,13 +1,20 @@
 const express = require('express');
 require('./database/connection');
 require('dotenv').config();
-// const mensrouter = require('../src/routers/mens');
+
+// Link Routers
+const merchantRouter = require('./routers/merchant');
+const channelRouter = require('./routers/channel');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
-// app.use(mensrouter);
+
+//Routers use
+app.use(merchantRouter,channelRouter);
+
+
 
 
 //Base route
